@@ -45,10 +45,10 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public int getYear() {
+	public int getPublicationYear() {
 		return publicationYear;
 	}
-	public void setYear(int year) {
+	public void setPublicationYear(int year) {
 		this.publicationYear = year;
 	}
 	public String getIsbn() {
