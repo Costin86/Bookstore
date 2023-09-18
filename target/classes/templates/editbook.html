@@ -7,7 +7,7 @@
 <body>
     <h1>Edit Book</h1>
     <div>
-        <form th:object="${book}" th:action="@{/save}" method="post">
+        <form th:object="${book}" th:action="@{../save}" method="post">
             <input type="hidden" th:field="*{id}" />
             
             <label for="bookname">Title</label>
@@ -30,6 +30,11 @@
             <input type="text" id="price" th:field="*{price}" />
             <div style="clear: both; display: block; height: 10px;"></div>
             
+            					
+		  	<label for="deplist">Category</label>
+			 <select id="deplist" th:field="*{Category}" class="form-control">
+       			<option th:each="category: ${categories}" th:value="${category.categoryid}" th:text="${category.name}"></option>
+    		</select>	
             <input type="submit" value="Update" />
         </form>
     </div>
