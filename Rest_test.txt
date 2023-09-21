@@ -1,0 +1,4 @@
+curl http://localhost:8080/api/
+curl -X DELETE http://localhost:8080/api/books/3
+curl -X PUT http://localhost:8080/api/books/2 -H 'Content-type:application/json' -d '{"title":"Evil under the sun","author":"Agatha Christie","publicationYear":1945,"isbn":"123-5879-987","price":35.0,"category":{"categoryid":1,"name":"Crime"}}'
+curl -H "Content-Type: application/json" -X POST -d '{"title":"Orient Express","author":"Agatha Christie","publicationYear":1929,"isbn":"123-59-987","price":28.0,"category":{"categoryid":3,"name":"Mystery"}}' http://localhost:8080/api/books
