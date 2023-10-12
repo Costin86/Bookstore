@@ -2,10 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
      	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
-        <title>Studenlist login</title>
+        <title>Booklist login</title>
 		<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
     </head>
     <body>
+		
     <div class="container">
         <div class="alert alert-danger" th:if="${param.error}">
             Invalid username and password.
@@ -14,6 +15,7 @@
             You have been logged out.
         </div>
         <form th:action="@{/login}" method="post" >
+			<h2>Please sign in</h2>
             <div><label> User Name : <input type="text" name="username" class="form-control"/> </label></div>
             <div><label> Password: <input type="password" name="password" class="form-control"/> </label></div>
             <div><input type="submit" value="Sign In" class="btn btn-primary"/></div>
